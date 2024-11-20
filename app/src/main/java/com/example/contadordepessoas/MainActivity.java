@@ -31,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
         Button botaoHomem = (Button) findViewById(R.id.botaoHomem);
         Button botaoMulher = (Button) findViewById(R.id.botaoMulher);
         Button botaoReset = (Button) findViewById(R.id.botaoReset);
+        Button botaoResetHomem = (Button) findViewById(R.id.botaoResetHomem);
+        Button botaoResetMulher = (Button) findViewById(R.id.botaoResetMulher);
 
-        //onclicklistener pro botao do homem
+
 
         botaoHomem.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 totalh++;
                 totalpessoas++;
                 String mensagem = Integer.toString(totalpessoas);
+                campoTexto.setText("Total: " + mensagem + " pessoas");
                 campoTexto.setText("Total: " + mensagem + " pessoas");
                 botaoHomem.setText(Integer.toString(totalh));
             }
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 totalpessoas++;
                 String mensagem = Integer.toString(totalpessoas);
                 campoTexto.setText("Total: " + mensagem + " pessoas");
+                campoTexto.setText("Total: " + mensagem + " pessoas");
                 botaoMulher.setText(Integer.toString(totalm));
             }
         }
@@ -61,6 +65,32 @@ public class MainActivity extends AppCompatActivity {
                 totalm = 0;
                 totalh = 0;
                 totalpessoas = 0;
+                String mensagem = Integer.toString(totalpessoas);
+                campoTexto.setText("Total: " + mensagem + " pessoas");
+                campoTexto.setText("Total: " + mensagem + " pessoas");
+                botaoMulher.setText(Integer.toString(totalm));
+                botaoHomem.setText(Integer.toString(totalh));
+            }
+        }
+        );
+
+        botaoResetHomem.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                totalpessoas = totalpessoas-totalh;
+                totalh = 0;
+                String mensagem = Integer.toString(totalpessoas);
+                campoTexto.setText("Total: " + mensagem + " pessoas");
+                campoTexto.setText("Total: " + mensagem + " pessoas");
+                botaoMulher.setText(Integer.toString(totalm));
+                botaoHomem.setText(Integer.toString(totalh));
+            }
+        }
+        );
+
+        botaoResetMulher.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                totalpessoas = totalpessoas-totalm;
+                totalm = 0;
                 String mensagem = Integer.toString(totalpessoas);
                 campoTexto.setText("Total: " + mensagem + " pessoas");
                 botaoMulher.setText(Integer.toString(totalm));

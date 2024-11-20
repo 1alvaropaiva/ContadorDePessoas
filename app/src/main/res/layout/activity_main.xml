@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A5A5A8"
+    android:background="#F60707"
+    android:backgroundTint="#040404"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,46 +14,75 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pessoas: 0"
+        android:textColor="#FDFDFD"
         android:textSize="50px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <Button
+        android:id="@+id/botaoHomem"
+        android:layout_width="240px"
+        android:layout_height="140px"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="170dp"
+        android:backgroundTint="#2833F6"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botaoMulher"
+        android:layout_width="240px"
+        android:layout_height="140px"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="170dp"
+        android:backgroundTint="#D723C1"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/botaoReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#747E7878"
+        android:text="RESET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_marginLeft="20px"
-        android:layout_marginBottom="20px"
-        android:id="@+id/botaoHomem"
-        android:layout_width="200px"
-        android:layout_height="120px"
-        android:backgroundTint="#2833F6"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
-
-    <Button
-        android:layout_marginRight="20px"
-        android:layout_marginBottom="20px"
-        android:id="@+id/botaoMulher"
-        android:layout_width="200px"
-        android:layout_height="120px"
-        android:backgroundTint="#DC15E6"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-         />
-
-    <Button
-        android:layout_marginTop="30px"
-        android:id="@+id/botaoReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0B0B0B"
+        android:id="@+id/botaoResetHomem"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#747E7878"
         android:text="RESET"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        android:textColor="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/botaoHomem"
+        app:layout_constraintStart_toStartOf="@id/botaoHomem"
+        app:layout_constraintTop_toBottomOf="@id/botaoHomem" />
+
+    <Button
+        android:id="@+id/botaoResetMulher"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#747E7878"
+        android:text="RESET"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/botaoMulher"
+        app:layout_constraintStart_toStartOf="@id/botaoMulher"
+        app:layout_constraintEnd_toEndOf="@id/botaoMulher"
+        app:layout_constraintVertical_bias="0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
