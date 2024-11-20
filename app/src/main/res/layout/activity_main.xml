@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textoPessoas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pessoas: 0"
@@ -19,8 +20,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_marginLeft="10px"
-        android:id="@+id/button"
+        android:layout_marginLeft="20px"
+        android:layout_marginBottom="20px"
+        android:id="@+id/botaoHomem"
         android:layout_width="200px"
         android:layout_height="120px"
         android:backgroundTint="#2833F6"
@@ -30,8 +32,9 @@
          />
 
     <Button
-        android:layout_marginRight="10px"
-        android:id="@+id/button2"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="20px"
+        android:id="@+id/botaoMulher"
         android:layout_width="200px"
         android:layout_height="120px"
         android:backgroundTint="#DC15E6"
@@ -42,7 +45,7 @@
 
     <Button
         android:layout_marginTop="30px"
-        android:id="@+id/button3"
+        android:id="@+id/botaoReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0B0B0B"
